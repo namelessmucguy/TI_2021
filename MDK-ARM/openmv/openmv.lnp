@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+".\openmv\startup_stm32f103xe.o"
+".\openmv\openmv.o"
+".\openmv\main.o"
+".\openmv\gpio.o"
+".\openmv\tim.o"
+".\openmv\usart.o"
+".\openmv\stm32f1xx_it.o"
+".\openmv\stm32f1xx_hal_msp.o"
+".\openmv\stm32f1xx_hal_gpio_ex.o"
+".\openmv\stm32f1xx_hal_tim.o"
+".\openmv\stm32f1xx_hal_tim_ex.o"
+".\openmv\stm32f1xx_hal.o"
+".\openmv\stm32f1xx_hal_rcc.o"
+".\openmv\stm32f1xx_hal_rcc_ex.o"
+".\openmv\stm32f1xx_hal_gpio.o"
+".\openmv\stm32f1xx_hal_dma.o"
+".\openmv\stm32f1xx_hal_cortex.o"
+".\openmv\stm32f1xx_hal_pwr.o"
+".\openmv\stm32f1xx_hal_flash.o"
+".\openmv\stm32f1xx_hal_flash_ex.o"
+".\openmv\stm32f1xx_hal_exti.o"
+".\openmv\stm32f1xx_hal_uart.o"
+".\openmv\system_stm32f1xx.o"
+--library_type=microlib --strict --scatter ".\openmv\openmv.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "openmv.map" -o .\openmv\openmv.axf
